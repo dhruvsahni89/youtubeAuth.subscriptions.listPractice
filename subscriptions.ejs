@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUTUBE SUBSCRIPTIONS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Your Subscribers List</h1>
+      <ul>
+        <% subscriptions.forEach(function (subscription) { %>
+          <a target="_blank" href="https://www.youtube.com/channel/<%= subscription.snippet.resourceId.channelId %>"><img class="img-rounded" src="<%=subscription.snippet.thumbnails.default.url%>"/></a>
+        <% }) %>
+      </ul>
+      </div>
+    
+</body>
+</html>
